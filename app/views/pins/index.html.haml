@@ -1,0 +1,18 @@
+- if user_signed_in?
+	#pins.transitions-enabled
+		- @pins.each do |pin|
+			.box.panel.panel-default
+				%h1.mood= link_to pin.title, pin
+				= image_tag("/assets/icons/#{pin.title}.png", class:"main-icon animated zoomInUp")
+				= image_tag("/assets/take5/#{pin.mood}.png")
+				%p.description= pin.description.html_safe 
+				%ul.nav.options
+					%li.pull-left= link_to "Like", like_pin_path(pin), method: :put, class: "like"
+	
+					%li.pull-left.like-count= pin.get_upvotes.size 
+					
+					%li.pull-right= link_to "View", pin
+						
+				
+- else
+%h2.videoplayer intro video

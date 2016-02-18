@@ -1,0 +1,41 @@
+!!! 5
+%html
+%head
+	%title Take 5 Pin Board 
+	
+	%meta{:charset => "utf-8"}
+	%meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+	%meta{:name => "viewport", :content => "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"}
+
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+
+%body
+	%nav.navbar.navbar-default
+		.container
+			.navbar-brand= link_to image_tag( '/assets/take5/take-5.png'), root_path
+			
+			- if user_signed_in?
+				%ul.nav.pull-right.pager
+					%span= image_tag( '/assets/aware.png', class:"aware-logo")
+					%li= link_to "Account", edit_user_registration_path
+			- else
+				%ul.nav.pull-right.pager
+					%li.home-btn.login-btn= link_to "Log In", new_user_session_path
+	.container
+		- flash.each do |name, msg|
+			= content_tag :div, msg, class: "alert alert-info animated bounceOutUp"
+		= yield
+
+- if current_page?(root_path)
+	%nav.navbar-fixed-bottom.navbar-default.footer
+		.container
+
+			- if user_signed_in?
+				%ul.nav.pager
+					%li= link_to "Share", new_pin_path
+
+			- else
+				%ul.nav.pager
+					%li.home-btn= link_to "Get Started", new_user_session_path

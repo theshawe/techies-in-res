@@ -1,0 +1,34 @@
+toolbar:
+  - formatselect alignleft aligncenter fontselect forecolor backcolor |  bold italic underline strikethrough | bullist | link unlink | emoticons 
+plugins:
+  - advlist
+  - autolink
+  - lists
+  - link
+  - image
+  - charmap
+  - preview
+  - hr
+  - anchor
+  - searchreplace
+  - visualblocks
+  - visualchars
+  - code
+  - fullscreen
+  - insertdatetime
+  - media
+  - nonbreaking
+  - table
+  - contextmenu
+  - emoticons
+  - textcolor
+  - colorpicker
+menubar: false
+setup :
+  function(ed) {
+    ed.on('init', function() 
+    {
+        this.getDoc().body.style.fontSize = '38px';
+    });
+  }
+

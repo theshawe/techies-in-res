@@ -1,0 +1,38 @@
+=tinymce_assets
+#pin_show.row
+	.col-md-8
+		.panel.panel-default
+			.panel-heading.pin_image
+				
+				.panel-body 
+					= image_tag("/assets/icons/#{@pin.title}.png", class:"title-icon animated zoomInUp")
+				= image_tag @pin.image.url
+				.holder	
+					= image_tag("/assets/take5/#{@pin.mood}.png", class:"mood-icon animated bounceInUp")
+					.slide-content	
+						
+						%p.description= @pin.description.html_safe
+						%p.mood= @pin.mood
+				.panel-footer
+					.row
+						.col-md-6
+							= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do
+								%span.glyphicon.glyphicon-heart
+									= @pin.get_upvotes.size
+							- if (user_signed_in? && (current_user.id == @pin.user_id))
+								= link_to "Edit", edit_pin_path, class: "btn btn-default"
+								= link_to "Delete", pin_path, method: :delete, class: "btn btn-default"
+						.col-md-6
+							%h1= @pin.title
+							%p.user
+								Submitted by
+								= @pin.user.name
+
+						.col-md-6
+							.btn-group.pull-right
+	.col-md-4
+		= link_to image_tag("/assets/picture4.png"), new_pin_path 
+
+=tinymce
+
+

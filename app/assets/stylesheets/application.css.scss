@@ -1,0 +1,1068 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require 'masonry/transitions'
+ *= require easy-emoji
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'animate';
+
+body {
+background: #5D9FCE;
+background-image: linear-gradient(-41deg, rgb(239, 0, 201) 0%, rgba(36, 148, 228, 0.7) 50%);
+font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+a { color: #fff; }
+a:hover { text-decoration: none; color: #fff; }
+nav {
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	.navbar-brand {
+		a {
+			color: #BD1E23;
+			font-weight: bold;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#pins {
+  margin: 0 auto;
+  width: 100%;
+  .box {
+	  margin: 10px;
+	  width: 500px;
+	  height: 500px;
+	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	  border-radius: 7px;
+	  text-align: center;
+	  img {
+	  	max-width: 100%;
+	  	height: auto;
+	  }
+	  h2 {
+	  	font-size: 22px;
+	  	margin: 0;
+	  	padding: 25px 10px;
+	  	a {
+				color: #474747;
+	  	}
+	  }
+	  .user {
+	  	font-size: 12px;
+	  	border-top: 1px solid #EAEAEA;
+			padding: 15px;
+			margin: 0;
+	  }
+	}
+}
+
+
+#edit_page {
+	.current_image {
+		img {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+}
+
+#pin_show {
+    margin: 15px;
+}
+
+#pin_show {
+	.panel-heading {
+		padding: 0;
+	}
+	.pin_image {
+		img {
+			max-width: 100%;
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.panel-body {
+		padding: 35px;
+		h1 {
+			margin: 0 0 10px 0;
+		}
+		.description {
+			color: #868686;
+			line-height: 1.75;
+			margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+}
+
+textarea {
+	min-height: 250px;
+}
+
+
+
+/* Index Pin List */
+
+img.main-icon {
+        z-index: 100!important;
+    width: 110px;
+    left: 15px;
+}
+
+
+#pins .btn {
+    background-image: radial-gradient(50% 100%, #ADE24E 0%, #0AC13B 100%);
+    border-radius: 100px;
+    font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+    font-size: 29.43px;
+    color: #ffffff;
+    line-height: 40px;
+    text-shadow: 2px 1px 6px #383838;
+    font-weight: 900;
+    margin-bottom: 1em;
+    box-shadow: 2px 5px 4px #0A0;
+    border: 2px solid #0A0;
+}
+
+#pin_show .panel-body em {
+
+font-family: Impact, Charcoal, sans-serif;
+
+}
+
+#pin_show .panel-body em strong {
+
+font-family: ‘Courier New’, Courier, monospace;
+
+}
+
+.box p em strong { 
+
+font-size: 1em;
+color: #fff;
+font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.box p em  { 
+
+font-size: 3em;
+color: #fff;
+font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+}
+
+.box p strong  { 
+
+font-size: 3em;
+color: #fff;
+font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+text-shadow: 2px 2px 2px #000;
+}
+/************************************************ NEW LAYER *********/
+
+.navbar-default {
+background-image: linear-gradient(-41deg, rgb(71, 167, 234) 0%, rgba(29, 161, 255, 0.85) 50%);
+border-bottom: 20px solid rgba(221, 193, 214, 0.06);
+border-radius: 0;
+}
+
+table {
+	    max-width: 350px;
+	    width: 100%;
+}
+
+.cancel {
+    line-height: 1em;
+    font-size: 2em;
+    border: 2px solid rgba(255, 255, 255, 0.31);
+    padding: .5em 2em;
+    width: 100%;
+    display: block;
+    margin-top: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: rgba(255, 247, 253, 0.71);
+}
+
+.cancel:hover {
+background-color: rgba(210, 26, 26, 0.79);
+text-decoration: none;
+color: #fff;
+border: none;
+text-shadow: 1px 1px 1px #000;
+}
+
+/* On Sign Up */
+
+.alert-info {
+
+    border-color: #bce8f1;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    background-image: linear-gradient(-134deg, #D647C0 0%, #A200B0 100%);
+    border: 1px solid #979797;
+}
+
+.alert {
+margin-top: 1em;	
+border-radius: 100px;
+}
+
+
+/* Login Stuff */
+
+.sign-up {
+    float: left;
+    font-size: 2em;
+    color: rgba(8, 3, 8, 0.66);
+    padding-left: 15%;
+    margin-top: 2.5%;
+}
+
+.sign-up p {
+    margin-bottom: 25px;
+}
+
+.sign-up a {
+    border: 2px solid #fff;
+    border-radius: 45px;
+    padding: 5px 50px 5px 50px;
+    display: inline-block;
+    margin: 15px 0px;
+}
+
+.login {
+    margin-top: 10px;
+    padding-right: 25px;
+    font-size: 2em;
+    color: #fff;
+    width: 50%;
+    float: left;
+}
+
+.login .help-block {
+    color: rgba(255, 255, 255, 0.46);
+
+}
+
+
+/****** not signed in ****/
+
+.videoplayer {
+    background-image: url("/images/video-player.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: 100%;
+    text-indent: -9999px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Photo upload 
+
+.form-group.file.optional.pin_image {
+    position: absolute;
+    top: 0;
+    margin-top: -117px;
+    background-image: url("/images/upload.png");
+
+}
+
+*/ 
+/* HOME PAGE */
+
+.navbar { 
+margin-bottom: 0;
+}
+
+.navbar-brand {
+height: 100%;
+}
+
+.navbar-brand img  {
+width: 100%;
+max-width: 250px;
+}
+
+.navbar-fixed-bottom .home-btn {
+font-size: 2em;
+}
+
+.nav > li > a { 
+padding: 15px 15px;
+}
+
+nav.navbar.navbar-default > div > ul {
+width: 200px;
+}
+
+.navbar .pull-right li a {
+    font-size: 25px;
+    width: 100%;
+    line-height: 1em;
+    background-image: radial-gradient(50% 100%, #5B1F92 0%, #5E2077 100%);
+}
+
+/* Individual Slides */
+
+img.title-icon {
+width: 50% !important;
+top: 260px;
+z-index: 0;
+padding-top: 25%;
+}
+
+.mood-icon {
+
+}
+
+#pin_show .panel-body {
+    padding: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+
+img.aware-logo {
+    width: 120px;
+    position: relative;
+    top: -5px;
+    left: -85px;
+     -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+
+.btn-default { background-color: transparent; border: none;  }
+
+.glyphicon-heart:before {
+    content: url("/images/emoji/heart.png");
+    position: relative;
+    top: 11px;
+    left: -17px;
+    padding-left: 17px;
+}
+
+span.glyphicon.glyphicon-heart {
+    font-size: 50px;
+    color: rgba(163, 1, 1, 0.65);
+    font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+    font-weight: 900;
+}
+
+img.emoji {
+    width: 50px !important;
+    height: 50px;
+    display: inline;
+    float: left;
+}
+
+#pin_show .panel-footer {
+    padding: 37.5px 35px;
+}
+
+.panel-footer h1 {
+    padding-left: 45px;
+}
+
+.panel-footer p {
+    padding-left: 50px;
+}
+
+
+
+/****** Pins ****/
+#pin_show .panel-heading {
+    padding: 0;
+    background: rgba(190, 247, 244, 0.22);
+}
+
+.panel {
+border: 0;
+background-color: #3EAEFE;
+}
+
+.slide-content {
+    font-size: 2em;
+    line-height: 1em;
+    padding: 25px;
+    border-top: 15px solid rgba(204, 204, 204, 0.12);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 15px solid rgba(204, 204, 204, 0.12);
+    box-shadow: 0px 1px 32px #FFF;
+}
+
+/*  Mood Cards  */
+
+/*title */
+
+.post-mood .title 
+{
+display: block;
+}
+
+.post-mood .title span.take5 {
+width: auto;
+float: none;
+}
+
+.post-mood .title label.card {
+background: transparent;
+padding: 5px;
+}
+
+.post-mood .title img
+{
+width: 145px;
+display: inline-block;
+height: 145px;
+padding: 0px;
+}
+
+.post-mood .title input[type="radio"], input[type="checkbox"] {
+    margin: 7px 5px 5px;
+}
+
+
+#pins .box { 
+box-shadow: 0 1px 2px 0 black;
+background: rgba(11, 25, 76, 0.36);
+border-radius: 0px;
+padding: 7.5px;
+overflow: hidden;
+display: block;
+}
+
+#pins .box h2 { 
+font-family: AvenirNextCondensed-Bold;
+padding: 0;
+margin: 0;
+text-align: left;
+margin-left: 25px;
+color: #fff;
+z-index: 1000;
+position: relative;
+}
+
+#pins .box h2 a {
+    color: #F7F7F7;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000;
+    z-index: 1000;
+    position: relative;
+}
+
+#pins .box p {
+text-align: left;
+margin-left: 25px;
+color: #fff;
+z-index: 1000;
+position: relative;
+font-size: 3em;
+    max-height: 200px;
+    overflow: hidden;
+
+}
+
+#pins .box .user { 
+border-top: 5px solid rgba(5, 186, 255, 0.78);
+border-bottom: 5px solid rgba(5, 186, 255, 0.78);
+}
+
+#pins .pager li > a 
+
+{    
+background: rgba(231, 234, 14, 0.9);
+border-radius: 100px;
+font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+box-shadow: 2px 5px 4px #0A0;
+color: #ffffff;
+border: 2px solid #0A0;
+width: auto;
+font-size: 1em;
+line-height: 1em;
+}
+
+
+
+#pins .emoji {
+position: static !important;	
+}
+
+#pins .box img {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+}
+
+#pins .box .user {
+border-top: 2px solid rgba(25, 25, 25, 0.25);
+border-bottom: 2px solid rgba(25, 25, 25, 0.25);
+clear: both;
+display: block;
+text-align: right;
+background: rgba(23, 142, 245, 0.22);
+color: #fff;
+text-shadow: 1px 1px 1px #000;
+text-transform: uppercase;
+font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+}
+
+.options {
+color: #fff;
+}
+
+.options li a {
+    padding: 15px;
+    margin: 0;
+    color: rgb(67, 69, 70);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2px 2px 2px 2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    right: 45px;
+    width: 200px;
+    top: 18px;
+    transition: all .2s ease-in-out;
+}
+
+.options li a:hover {
+transform: scale(1.2);
+}
+
+.pull-left .like a:hover {
+    box-shadow: none;
+}
+
+ul.nav.options {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.options .like {
+    font-size: .8em;
+    background-image: url("/images/emoji/heart.png");
+    text-indent: -9999px;
+    height: 100px;
+    width: 100px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    left: 20px;
+    background-color: transparent;
+    margin-right: 50px;
+    background-position: 0px -5px;
+    border-radius: 0px;
+    top: 5px;
+}
+
+nav .options .pull-right
+{
+    margin-right: 27px;
+    margin-top: 9px;
+    width: 140px;
+}
+
+.options .like:hover {
+    font-size: .8em;
+    background-image: url("/images/emoji/heart.png");
+    text-indent: -9999px;
+    height: 100px;
+    width: 100px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    left: 20px;
+    background-color: transparent;
+    margin-right: 50px;
+    background-position: 0px -5px;
+    border-radius: 0px;
+    top: 5px;
+} 
+
+.options .like-count {
+    font-size: 2em;
+    line-height: 2.5em;
+        -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -ms-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+}
+
+
+
+
+/**************** Footer */
+
+.footer {
+
+opacity: 1;
+height: 120px;
+line-height: 80px;
+width: 100%;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -ms-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+}
+
+.scrolled {
+  opacity: 1;
+  height: 75px;
+
+}
+
+.scrolled .pager {
+    margin: 0px;
+}
+
+.scrolled .pager li > a {
+
+background-image: radial-gradient(50% 100%, #ADE24E 0%, #0AC13B 100%);
+    border-radius: 100px;
+    font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+    font-size: 29.43px;
+    color: #ffffff;
+    line-height: 15px;
+    text-shadow: 2px 1px 6px #383838;
+    font-weight: 900;
+    box-shadow: 2px 5px 4px #0A0;
+    border: 2px solid #0A0;
+    font-weight: 100;
+    width: 200px;
+    font-size: 24px;
+
+}
+
+
+.pager li > a {
+background-image: radial-gradient(50% 100%, #ADE24E 0%, #0AC13B 100%);
+border-radius: 100px;
+font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
+font-size: 29.43px;
+color: #ffffff;
+line-height: 40px;
+text-shadow: 2px 1px 6px #383838;
+font-weight: 900;
+box-shadow: 2px 5px 4px #0A0;
+border: 2px solid #0A0;
+font-weight: 100;
+width: 90%;
+}
+
+.pager li > a:hover {
+background-image: radial-gradient(30% 100%, rgba(173, 226, 78, 0.31) -162%, rgba(25, 214, 75, 0.97) 100%);
+text-shadow: 2px 1px 6px #D4CFD4;
+box-shadow: 2px 5px 4px #20A;
+border: 2px solid #390065;
+}
+
+/********* tinymce */
+.mce-content-body  {
+
+font-size: 24px;
+
+}
+
+.mce-content-body  strong {
+
+color: red;
+font-size: 2em;
+}
+
+
+/*
+#mceu_16-body { display: none;}
+#mceu_29 { display: none; }
+*/
+
+#tinymce {
+    font-size: 14pt;
+
+}
+
+#new_pin > div:nth-child(3) > label {
+    width: 100%;
+    background-color: #fefefe;
+    height: 2em;
+    line-height: 2em;
+    font-size: 2em;
+    #text-align: left;
+    padding-left: 10px;
+}
+
+#new_pin h2 {
+        background: #fff;
+    padding: 10px;
+}
+
+#new_pin p {
+        background: rgba(255, 255, 255, 0.73);
+    padding: 25px 10px;
+    font-size: 1.8em;
+}
+
+.take5 img {
+    width: 100%;
+}
+
+
+
+/* Posts */
+
+span.take5 {
+    width: 175px;
+    float: left;
+}
+
+label.picture-title {
+    clear: both;
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+label.card {
+    background: rgba(41, 89, 130, 0.36) !important;
+    box-shadow: 2px 6px 2px rgba(161, 80, 167, 0.51);
+    margin-bottom: 2em;
+}
+
+
+.form-group {
+    clear: both;
+}
+
+.form-group.take5options label {
+    display: block;
+    float: left;
+    font-size: 26px;
+    margin-top: 0px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(2, 0, 2, 0.41);
+    padding: 5px 5px 0px 5px;
+}
+
+label.picture-title {
+    background-color: #fff;
+}
+
+.random-image {
+    position: fixed;
+    bottom: 5px;
+}
+
+#pin_show > div.col-md-4 > a > img{
+    position: fixed;
+    bottom: 5px;
+}
+
+.form-group.take5options label input {
+    margin: 0 auto;
+    left: auto;
+    right: auto;
+    text-align: center;
+    margin-left: 7px;
+    margin-bottom: 22px;
+}
+
+
+/* Mood Posts */
+
+.container h1.mood {
+text-align: center;
+    font-weight: 900;
+    line-height: 2em;
+    border-radius: 0px;
+    background-color: rgba(190, 247, 244, 0.22);
+    margin: .25em 0em;
+    color: #FFF;
+}
+
+
+.container h1.mood span {
+color: rgba(252, 255, 153, 0.89);
+font-size: .65em;
+padding-left: 2em;
+
+}
+
+.post-mood .help-block {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color: #4C1D1D;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.post-mood .btn {
+    
+    text-align: center;
+    width: 100%;
+    line-height: 2em;
+    font-size: 2em;
+    background: rgba(35, 191, 35, 0.87);
+}
+
+
+
+
+/* File Upload*/
+
+.selfie input[type="file"] {
+    border-radius: 0;
+    background: rgb(255, 255, 255);
+}
+
+#pin_image {
+
+}
+
+
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+/* HOME PAGE */
+
+.main-icon.animated.zoomInUp
+{
+width: 35px !important;
+top: 7.5px !important;
+left: 0px !important;
+}
+
+
+/**************** Top bar */
+
+li.pull-right 
+{
+float:none !important;
+margin: 0;
+padding: 0;
+margin-top: 58px;
+margin-bottom: 5px;
+}
+
+.pull-right a 
+{
+background-color: rgba(111, 121, 150, 0.13);
+color: rgba(37, 35, 38, 1);
+}
+
+body > nav.navbar.navbar-default > div > ul { display: none;}
+
+.container 
+{ 
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+#pins .box 
+{
+	width: 50%;
+}
+
+
+
+/* Login Stuff */
+
+.login 
+{
+    margin-top: 10px;
+    padding-right: 25px;
+    font-size: 2em;
+    color: #fff;
+    width: 50%;
+    float: left;
+}
+
+.login .help-block 
+{
+    color: rgba(255, 255, 255, 0.46);
+
+}
+
+.login h2 
+{
+
+padding: 0px 25px 0px 25px;
+
+}
+
+.login .form-inputs 
+{
+
+padding: 0px 0px 0px 25px;
+
+}
+
+.login .form-actions 
+{
+padding: 0px 0px 0px 25px;
+}
+
+.login a 
+{
+content: #000;
+line-height: 2em;
+font-size: 1em;	
+padding: 0px 0px 0px 25px;
+ }
+
+.login p 
+{
+padding: 0px 0px 0px 25px;
+}
+
+/* Mood Cards */
+
+.container h1.mood 
+{
+font-size: 1em;
+
+}
+
+.mood img 
+{
+width: auto;
+height: auto;
+max-height: auto;
+}
+
+#pins .box img 
+{
+width: auto;
+height: auto;
+max-height: auto;
+}
+
+
+
+/******** Masonry */
+
+div#pins.transitions-enabled.masonry 
+{
+width: 50%;
+}
+
+div.box.panel.panel-default.masonry-brick 
+{
+position: absolute;
+top: 0px;
+left: 0px;
+height: auto;
+min-height: 200px;
+}
+
+#pins .box 
+{ 
+margin: 0;
+width: 50%;
+overflow: hidden;
+height: 160px !important;
+}
+
+#pins .btn 
+{
+font-size: 14.24px;
+line-height: 1em;
+}
+
+ul.nav.options 
+{
+top: 117px;
+position: absolute;
+width: 100%;
+left: 0px
+}
+
+.options .like 
+{
+font-size: .5em;
+background-image: url("/images/emoji/heart.png");
+line-height: 80px;
+height: 35px;
+width: 35px;
+background-size: 30px;
+background-repeat: no-repeat;
+left: 0px;
+background-color: transparent;
+margin-right: 2px;
+background-position: 2px 0px;
+border-radius: 0px;
+top: 3.5px;
+}
+
+.options 
+{ 
+padding: 0;
+}
+
+.options li a
+{ 
+padding: 5px;
+margin: 0;
+left: 0px;
+right: 0px;
+text-align: center;
+top: -2px;
+width: 160px;
+border-radius: 0;
+font-weight: 100;
+margin-top: -12.5px;
+padding-top: 10.5px;
+padding-bottom: 15px
+}
+
+.options .like-count {
+    font-size: 1em;
+}
+
+
+
+}

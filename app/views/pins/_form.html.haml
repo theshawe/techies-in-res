@@ -1,0 +1,45 @@
+=tinymce_assets
+
+.post-mood
+  = simple_form_for @pin, html: { multipart: true } do |f|
+    - if @pin.errors.any?
+      #errors
+        %h2
+          = pluralize(@pin.errors.count, "error")
+          prevented this Pin from saving
+        %ul
+          - @pin.errors.full_messages.each do |msg|
+            %li= msg
+
+
+    .form-group.title
+      = f.label "Choose one of your Take5 actions!."
+      = f.collection_radio_buttons(:title, [['Connect','connect'],['Be Active', 'be-active'],['Take Notice', 'take-notice'],['Keep Learning', 'keep-learning'], ['Give', 'give'] ],
+                             :first, :last,
+                             :item_wrapper_class => 'take5 transitions-enabled',
+                             ) { |mood| mood.label(:class => "card") { image_tag("/assets/icons/#{mood.text}.png") + mood.radio_button(:class => "collection_radio_buttons icon-star") } }
+
+    .form-group.take5options.animated.bounceInDown
+      = f.label :test, "Choose a picture that fits your story...",class: 'picture-title'
+      = f.collection_radio_buttons(:mood, [['Connect', 'connect'], ['connect-two', 'Connect',], ['connect-three', 'Connect'], ['connect-four', 'Connect'], ['connect-five', 'Connect'], ['be-active', 'Be Active'], ['be-active-2', 'Be Active'], ['be-active-3', 'Be Active'], ['be-active-4', 'Be Active'], ['be-active-5', 'Be Active'], ['take-notice', 'Take Notice'], ['take-notice-2', 'Take Notice'], ['take-notice-3', 'Take Notice'], ['take-notice-4', 'Take Notice'], ['take-notice-5', 'Take Notice'],  ['keep-learning', 'Keep Learning'], ['keep-learning-2', 'Keep Learning'], ['keep-learning-3', 'Keep Learning'], ['keep-learning-4', 'Keep Learning'], ['keep-learning-5', 'Keep Learning'], ['give', 'Give'], ['give-2', 'give'], ['give-3', 'Give'], ['give-4', 'Give'], ['give-5', 'Give']],
+                             :first, :last,
+                             :item_wrapper_class => 'take5 transitions-enabled',
+                             ) { |mood| mood.label(:class => "card") { image_tag("/assets/take5/#{mood.value}.png") + mood.radio_button(:class => "collection_radio_buttons icon-star")  } }
+
+
+    .form-group.selfie
+      = f.input :image, label: "Attach a Screenshot, Photo or Selfie.",  input_html: { class: 'form-control' }
+    
+    %h2 Tell us a story. 
+    %p What steps do you take to improve your wellbeing, choose an image below and remeber to choose one of your take5 actions from the top!
+    .form-group
+      = f.text_area :description,  class: "tinymce", label: "Do One Thing! :point_up: "
+
+
+    
+
+      =  f.hidden_field :user_id , value: current_user.id
+
+    = f.button :submit, "Share Your Step", class: "btn btn-primary"
+
+=tinymce

@@ -1,0 +1,6 @@
+- # sex use locales
+= t(@user.profile.sex)
+- # avatar url
+= link_to 'original', @user.profile.avatar.url, target: '_blank'
+= link_to 'medium', @user.profile.avatar.url(:medium), target: '_blank'
+= link_to 'thumb', @user.profile.avatar.url(:thumb), target: '_blank'
