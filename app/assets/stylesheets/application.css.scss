@@ -719,13 +719,13 @@ font-size: 2em;
 }
 
 #new_pin > div:nth-child(3) > label {
-    width: 100%;
-    background-color: #fefefe;
-    height: 2em;
-    line-height: 2em;
-    font-size: 2em;
-    #text-align: left;
-    padding-left: 10px;
+	background-color: #2e3841;
+	text-transform: uppercase !important;
+	color: #e7eded;
+	font-size: 33px !important;
+	text-align: center;
+	line-height: 1em;
+	padding: 35px !important;
 }
 
 #new_pin h2 {
