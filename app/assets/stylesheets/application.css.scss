@@ -435,7 +435,7 @@ background-color: #3EAEFE;
 }
 
 .post-mood .title span.take5 {
-width: auto;
+width: 33.3%;
 float: none;
 }
 
@@ -776,12 +776,7 @@ label.card {
 
 .form-group.take5options label {
     display: block;
-    float: left;
-    font-size: 26px;
-    margin-top: 0px;
-    text-transform: capitalize;
-    text-shadow: 2px 2px 2px rgba(2, 0, 2, 0.41);
-    padding: 5px 5px 0px 5px;
+
 }
 
 label.picture-title {
@@ -811,6 +806,7 @@ label.picture-title {
     text-align: center;
     margin-left: 7px;
     margin-bottom: 22px;
+		display:none;
 }
 
 
@@ -997,7 +993,7 @@ max-height: auto;
 
 div#pins.transitions-enabled.masonry
 {
-width: 50%;
+width: 100%;
 }
 
 div.box.panel.panel-default.masonry-brick
