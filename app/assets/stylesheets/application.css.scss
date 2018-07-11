@@ -165,21 +165,21 @@ font-family: ‘Courier New’, Courier, monospace;
 
 }
 
-.box p em strong { 
+.box p em strong {
 
 font-size: 1em;
 color: #fff;
 font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.box p em  { 
+.box p em  {
 
 font-size: 3em;
 color: #fff;
 font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 }
 
-.box p strong  { 
+.box p strong  {
 
 font-size: 3em;
 color: #fff;
@@ -235,7 +235,7 @@ text-shadow: 1px 1px 1px #000;
 }
 
 .alert {
-margin-top: 1em;	
+margin-top: 1em;
 border-radius: 100px;
 }
 
@@ -290,7 +290,7 @@ border-radius: 100px;
     padding: 0;
 }
 
-/* Photo upload 
+/* Photo upload
 
 .form-group.file.optional.pin_image {
     position: absolute;
@@ -300,10 +300,10 @@ border-radius: 100px;
 
 }
 
-*/ 
+*/
 /* HOME PAGE */
 
-.navbar { 
+.navbar {
 margin-bottom: 0;
 }
 
@@ -320,7 +320,7 @@ max-width: 250px;
 font-size: 2em;
 }
 
-.nav > li > a { 
+.nav > li > a {
 padding: 15px 15px;
 }
 
@@ -428,7 +428,7 @@ background-color: #3EAEFE;
 
 /*title */
 
-.post-mood .title 
+.post-mood .title
 {
 display: block;
 }
@@ -456,7 +456,7 @@ padding: 0px;
 }
 
 
-#pins .box { 
+#pins .box {
 box-shadow: 0 1px 2px 0 black;
 background: rgba(11, 25, 76, 0.36);
 border-radius: 0px;
@@ -465,7 +465,7 @@ overflow: hidden;
 display: block;
 }
 
-#pins .box h2 { 
+#pins .box h2 {
 font-family: AvenirNextCondensed-Bold;
 padding: 0;
 margin: 0;
@@ -496,14 +496,14 @@ font-size: 3em;
 
 }
 
-#pins .box .user { 
+#pins .box .user {
 border-top: 5px solid rgba(5, 186, 255, 0.78);
 border-bottom: 5px solid rgba(5, 186, 255, 0.78);
 }
 
-#pins .pager li > a 
+#pins .pager li > a
 
-{    
+{
 background: rgba(231, 234, 14, 0.9);
 border-radius: 100px;
 font-family: avenir, 'avenir next', helvetica, arial, sans-serif;
@@ -518,7 +518,7 @@ line-height: 1em;
 
 
 #pins .emoji {
-position: static !important;	
+position: static !important;
 }
 
 #pins .box img {
@@ -613,7 +613,7 @@ nav .options .pull-right
     background-position: 0px -5px;
     border-radius: 0px;
     top: 5px;
-} 
+}
 
 .options .like-count {
     font-size: 2em;
@@ -729,7 +729,7 @@ font-size: 2em;
 }
 
 #new_pin h2 {
-        background: #fff;
+        background: #000;
     padding: 10px;
 }
 
@@ -781,7 +781,13 @@ label.card {
 }
 
 label.picture-title {
-    background-color: #fff;
+	background-color: #2e3841;
+	text-transform: uppercase !important;
+	color: #e7eded;
+	font-size: 33px !important;
+	text-align: center;
+	line-height: 1em;
+	padding: 35px !important;
 }
 
 .random-image {
@@ -834,7 +840,7 @@ padding-left: 2em;
 }
 
 .post-mood .btn {
-    
+
     text-align: center;
     width: 100%;
     line-height: 2em;
@@ -860,8 +866,8 @@ padding-left: 2em;
 
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -877,7 +883,7 @@ left: 0px !important;
 
 /**************** Top bar */
 
-li.pull-right 
+li.pull-right
 {
 float:none !important;
 margin: 0;
@@ -886,7 +892,7 @@ margin-top: 58px;
 margin-bottom: 5px;
 }
 
-.pull-right a 
+.pull-right a
 {
 background-color: rgba(111, 121, 150, 0.13);
 color: rgba(37, 35, 38, 1);
@@ -894,15 +900,15 @@ color: rgba(37, 35, 38, 1);
 
 body > nav.navbar.navbar-default > div > ul { display: none;}
 
-.container 
-{ 
+.container
+{
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 
 
-#pins .box 
+#pins .box
 {
 	width: 50%;
 }
@@ -911,7 +917,7 @@ body > nav.navbar.navbar-default > div > ul { display: none;}
 
 /* Login Stuff */
 
-.login 
+.login
 {
     margin-top: 10px;
     padding-right: 25px;
@@ -921,60 +927,60 @@ body > nav.navbar.navbar-default > div > ul { display: none;}
     float: left;
 }
 
-.login .help-block 
+.login .help-block
 {
     color: rgba(255, 255, 255, 0.46);
 
 }
 
-.login h2 
+.login h2
 {
 
 padding: 0px 25px 0px 25px;
 
 }
 
-.login .form-inputs 
+.login .form-inputs
 {
 
 padding: 0px 0px 0px 25px;
 
 }
 
-.login .form-actions 
+.login .form-actions
 {
 padding: 0px 0px 0px 25px;
 }
 
-.login a 
+.login a
 {
 content: #000;
 line-height: 2em;
-font-size: 1em;	
+font-size: 1em;
 padding: 0px 0px 0px 25px;
  }
 
-.login p 
+.login p
 {
 padding: 0px 0px 0px 25px;
 }
 
 /* Mood Cards */
 
-.container h1.mood 
+.container h1.mood
 {
 font-size: 1em;
 
 }
 
-.mood img 
+.mood img
 {
 width: auto;
 height: auto;
 max-height: auto;
 }
 
-#pins .box img 
+#pins .box img
 {
 width: auto;
 height: auto;
@@ -985,12 +991,12 @@ max-height: auto;
 
 /******** Masonry */
 
-div#pins.transitions-enabled.masonry 
+div#pins.transitions-enabled.masonry
 {
 width: 50%;
 }
 
-div.box.panel.panel-default.masonry-brick 
+div.box.panel.panel-default.masonry-brick
 {
 position: absolute;
 top: 0px;
@@ -999,21 +1005,21 @@ height: auto;
 min-height: 200px;
 }
 
-#pins .box 
-{ 
+#pins .box
+{
 margin: 0;
 width: 50%;
 overflow: hidden;
 height: 160px !important;
 }
 
-#pins .btn 
+#pins .btn
 {
 font-size: 14.24px;
 line-height: 1em;
 }
 
-ul.nav.options 
+ul.nav.options
 {
 top: 117px;
 position: absolute;
@@ -1021,7 +1027,7 @@ width: 100%;
 left: 0px
 }
 
-.options .like 
+.options .like
 {
 font-size: .5em;
 background-image: url("/images/emoji/heart.png");
@@ -1038,13 +1044,13 @@ border-radius: 0px;
 top: 3.5px;
 }
 
-.options 
-{ 
+.options
+{
 padding: 0;
 }
 
 .options li a
-{ 
+{
 padding: 5px;
 margin: 0;
 left: 0px;
